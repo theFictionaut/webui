@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html />
+
+<html lang="en">
+<head>
+    <title></title>
+</head>
+<body>
+<header>
+
+</header>
+<article>
+
+    
+
+
+
+</article>
+<article>
+<canvas id="demoCanvas" width="300" height="150"></canvas>
+<script type="text/javascript">
+    var canvas, graphics;
+    function draw_init() {
+        canvas = document.getElementById('demoCanvas');
+        if (canvas.getContext) {
+            graphics = canvas.getContext('2d');
+        }
+        draw();
+    }
+    function draw() {
+        var theme = ["#10222B", "#95AB63", "#BDD684", "#E2F0D6", "#F6FFE0"];
+        var x = Math.random() * 300;
+        var y = Math.random() * 150;
+        var size = (Math.random() * 100) + 20;
+        var num_circles = (Math.random() * 10) + 2;
+        for (var i = size; i > 0; i -= (size / num_circles)) {
+            graphics.fillStyle = theme[(Math.random() * 5 >> 0)];
+            graphics.beginPath();
+            graphics.arc(x, y, i * .5, 0, Math.PI * 2, true);
+            graphics.closePath();
+            graphics.fill();
+        }
+        t = setTimeout('draw()', 1000);
+    }
+    draw_init();
+</script> 
+<canvas id="textCanvas" width="600" height="150"></canvas>
+<script type="text/javascript">
+//    var textcanvas, textgraphics;
+//    function textdraw_init() {
+//        textcanvas = document.getElementById('textCanvas');
+//        if (textcanvas.getContext) {
+//            textgraphics = textcanvas.getContext('2d');
+//        }
+//        textdraw();
+//    }
+//    function textdraw() {
+//        var texttheme = ["#004488", "#0066aa", "#0088cc", "#00aaee", "#00ccff"];
+//        var textfont = ["Arial", "Times New Roman", "Comic Sans MS", "Papyrus", "Baskerville"];
+//        var x = Math.random() * 600;
+//        var y = Math.random() * 150;
+//        var size = (Math.random() * 50) + 10;
+//        textgraphics.font = size + "px '" + textfont[(Math.random() * 5 >> 0)] + "'";
+//        if (Math.random() > .5) {
+//            textgraphics.fillStyle = texttheme[(Math.random() * 5 >> 0)];
+//            textgraphics.fillText("Sample String", x, y);
+//        } else {
+//            textgraphics.strokeStyle = texttheme[(Math.random() * 5 >> 0)];
+//            textgraphics.strokeText("Sample String", x, y);
+//        }
+
+
+//        t = setTimeout('textdraw()', 950);
+//    }
+//    textdraw_init();
+</script> 
+
+<canvas id="fximageCanvas" width="400" height="300"></canvas>
+    <br />
+
+<a href="javascript:fximage_grayscale();">Convert to Grayscale</a> - <a href="javascript:fximage_draw();">Reset</a>
+<script type="text/javascript">
+    var fximage = new Image();
+    var fximage_canvas, fximage_graphics;
+    function fximage_init() {
+        fximage_canvas = document.getElementById('fximageCanvas');
+        if (fximage_canvas.getContext) {
+            fximage_graphics = fximage_canvas.getContext('2d');
+        }
+        fximage.onload = fximage_draw;
+        fximage.src = "santa.jpg";
+    }
+    function fximage_draw() {
+        fximage_graphics.drawImage(fximage, 0, 0, 400, 300);
+    }
+    function fximage_grayscale() {
+        input = fximage_graphics.getImageData(0, 0, fximage_canvas.width, fximage_canvas.height);
+        output = fximage_graphics.createImageData(fximage_canvas.width, fximage_canvas.height);
+        w = input.width;
+        h = input.height;
+        inputData = input.data;
+        outputData = output.data;
+        for (var y = 1; y < h - 1; y++) {
+            for (var x = 1; x < w - 1; x++) {
+                i = (y * w + x) * 4;
+                grayscale = inputData[i] * .3 + inputData[i + 1] * .59 + inputData[i + 2] * .11;
+                outputData[i] = grayscale; 	// red
+                outputData[i + 1] = grayscale; 	// green
+                outputData[i + 2] = grayscale; 	// blue
+                outputData[i + 3] = 255; 		// alpha
+            }
+        }
+        fximage_graphics.putImageData(output, 0, 0);
+    }
+    fximage_init();
+</script> 
+
+
+</article>
+
+</body>
+</html>

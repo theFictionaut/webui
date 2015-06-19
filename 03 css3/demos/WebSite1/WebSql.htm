@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Web SQL Example</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        var db = openDatabase('mydb', 1.0, 'My first db', 2 * 1024 * 1024);
+
+        function BuildDB() {
+            if (window.openDatabase) {
+
+                db.transaction(function (tx) {
+                    tx.executeSql('CREATE TABLE IF NOT EXISTS tweets ( id unique, screen_name ,date integer, tweet)',
+                    [], function () { alert("winning!"); });
+
+
+                });
+
+                
+            }
+        }
+
+        var twit = {
+
+            id: 1,
+            screenName: "Dave",
+            time: 45,
+            tweet: " message"
+        };
+
+
+        alert(twit.tweet);
+
+        function buildRecord() {
+
+            db.transaction(function (tx) {
+                tx.executeSql('INSERT INTO tweets (id, screen_name, date, tweet) VALUES(?,?,?,?)',
+                [twit.id, twit.screenName, twit.time, twit.tweet],
+                function () { alert("winning!"); }, 
+                function(){alert("fail");})
+
+            });
+        }
+    
+    </script>
+
+    <button id="buildit" onclick="BuildDB();">Build it!</button>
+    <button id="addrecord" onclick="buildRecord();">Add Record</button>
+</body>
+</html>

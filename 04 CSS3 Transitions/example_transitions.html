@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter 14: Example: Transition Example</title>
+    <style>
+        body {
+            background: #fff;
+            color: #000;
+            padding: 150px 0 0 150px;
+        }
+
+        img { /* for demonstration only */
+            /*margin: 50px;*/
+        }
+
+        img {
+            /* for Firefox 4 */
+            -moz-transform: rotate(45deg);
+            /* for Safari and Chrome */
+            -webkit-transform: rotate(45deg);
+            /* For Opera */
+            -o-transform: rotate(45deg);
+            /* W3C specification */
+            transform: rotate(45deg);
+
+
+
+             /*for Firefox 4*/ 
+            -moz-transition: all ease-in-out 2s 1s ;
+             /*for Safari and Chrome*/ 
+            -webkit-transition: all ease-in-out 2s 1s ;
+             /*For Opera */
+             -o-transition: all ease-in-out 2s 1s ;
+            
+            transition: all ease-in-out  2s;
+            
+        }
+
+            img:hover {
+                /* for Firefox 4 */
+                -moz-transform: scale(1.5, 1.5) rotate(0deg);
+                /* for Safari and Chrome */
+                -webkit-transform: scale(3.5, 3.5) rotate(0deg);
+                /* For Opera */
+                -o-transform: scale(1.5, 1.5) rotate(0deg);
+                /* W3C specification */
+                transform: scale(1.5, 1.5) rotate(0deg);
+            }
+
+        div {
+            width: 300px;
+            background-color: red;
+            height: 300px;
+            transition: all linear  2s 1s;
+        }
+
+            div:hover {
+                background-color: yellow;
+            }
+    </style>
+</head>
+<body>
+    <img src="images/hover_me.png" width="90" height="90" alt="Hover Me" />
+    <div style="">content</div>
+</body>
+</html>

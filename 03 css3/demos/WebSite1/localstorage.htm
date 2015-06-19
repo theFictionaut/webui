@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Menu Example</title>
+    <script src="json2.js" type="text/javascript"></script>
+</head>
+<body>
+    <script type="text/javascript">
+
+        function BuyThing() {
+
+            localStorage.setItem("thing", 5);
+
+            localStorage.NewValue = "test";
+            //or
+            sessionStorage.setItem("stuff", "value");
+
+        }
+
+        function GetThing() {
+
+                       var x =parseInt(localStorage.getItem("thing"));
+                       alert(typeof x);
+
+            alert(localStorage.thing); //use to add or read
+            alert(localStorage.key(0)); //access properties by indexer
+
+        }
+
+        function DeleteMyThing() {
+            //localStorage.removeItem("bibble");
+            //            localStorage.clear();
+            //            localStorage.length;
+
+
+        }
+
+        var courseDetails = {
+            title: "Introduction to HTML5 and CSS3",
+            code: "QAHHTML5",
+            duration: 3
+        }
+
+
+
+        function jsonStore() {
+            sessionStorage.setItem("courseDetails", JSON.stringify(courseDetails));
+        }
+
+        function jsonGet() {
+            var o = JSON.parse(sessionStorage.getItem("courseDetails"));
+            //var op = document.getElementById("myThing");
+
+            for (var i in o) {
+                alert(o[i]);
+            };
+
+        }
+        
+
+    </script>
+    <button id="doThing" onclick="BuyThing();">
+        Buy Thing</button>
+    <br />
+    <button id="getThing" onclick="GetThing();">
+        Get Thing</button>
+    <br />
+    <button id="deleteThing" onclick="DeleteMyThing();">
+        Get Thing</button>
+        <br />
+        <button id="jsonIt" onclick="jsonStore();">Json it</button>
+        <br />
+        <button id="stringIt" onclick="jsonGet();">String it</button>
+    <div id="myThing">
+    </div>
+</body>
+</html>

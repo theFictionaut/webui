@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Figure 14.2: Inset box-shadow styles</title>
+<style>
+body {
+    background: #fff;
+    color: #000;
+}
+
+div { /* for demostration purposes only */
+	float: left;
+	width: 130px;
+	height: 130px;
+	margin-right: 40px;
+	padding: 10px;
+	border: 1px solid #000;
+}
+
+div.one {
+	/* for Firefox */
+	-moz-box-shadow: inset 10px 10px rgba(0,0,0,0.8);
+	/* for Safari and Chrome */
+	-webkit-box-shadow: inset 10px 10px rgba(0,0,0,0.8);
+	/* W3C specs */
+	box-shadow: inset 10px 10px rgba(0,0,0,0.8);	
+}
+div.two {
+	/* for Firefox */
+	-moz-box-shadow: inset 10px 10px 20px rgba(0,0,0,0.8);
+	/* for Safari and Chrome */
+	-webkit-box-shadow: inset 10px 10px 20px rgba(0,0,0,0.8);
+	/* W3C specs */
+	box-shadow: inset 10px 10px 20px rgba(0,0,0,0.8);
+}
+
+
+</style>
+</head>
+<body>
+<div class="one">
+	Box with a sharp inset shadow
+</div>
+<div class="two">
+	Box with a inset shadow with a large blur
+</div>
+
+</body>
+</html>

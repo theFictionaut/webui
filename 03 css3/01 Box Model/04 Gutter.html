@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Figure 5.4: negative margin to break into gutter</title>
+<style>
+
+body {
+    background: #fff;
+    color: #000;
+}
+
+div {
+	width: 400px;
+	border: 1px dotted #999;
+<!--	padding: 0 50px;-->
+}
+
+div * {
+    background: #eee;
+}
+
+div h1 
+{
+    background: #999;
+	<!--margin-left: -50px;-->
+	
+}
+div h2 {
+	background: #bbb;
+		<!--margin: 0 -50px;-->
+}
+</style>
+</head>
+<body>
+<div>
+	<h1>Header 1 will break the left gutter. Header 1 will break the left gutter.</h1>
+	<h2>Header 2 will break both gutters. Header 2 will break both gutters.</h2>
+	<p>Other content will respect both gutters. Other content will respect both gutters. Other content will respect both gutters. Other content will respect both gutters. Other content will respect both gutters. Other content will respect both gutters. Other content will respect both gutters.</p>
+</div>
+
+</body>
+</html>

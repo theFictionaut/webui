@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+
+    <script>
+
+        sessionStorage.setItem('myStuff', 5);
+
+        localStorage.setItem("newVal", false);
+        localStorage.exando = "works";
+
+       // sessionStorage.expando = "yup";
+
+        console.dir(sessionStorage);
+        console.dir(localStorage);
+
+
+        var details = {
+            name: "dave",
+            company: "qa"
+        }
+
+        localStorage.setItem("myObj", JSON.stringify(details));
+
+
+
+    </script>
+
+    <a href="ReadStorage.html">Go to storage</a>
+
+</body>
+</html>

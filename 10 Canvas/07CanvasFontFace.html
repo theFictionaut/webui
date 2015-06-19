@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="GoodDog-fontfacekit/stylesheet.css" rel="stylesheet" />
+    <style>
+
+
+        #c { 
+            
+            /*width: 500px;
+             height: 375px;*/
+             border: 1px solid silver;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div style="font-family:'GoodDogRegular'; visibility: hidden; height: 0; overflow: hidden;">
+        test
+
+    </div>
+
+    <canvas id="c" width="500" height="375" ></canvas>
+
+
+    <script>
+
+
+        window.onload = function () {
+
+            var cCanvas = document.getElementById("c");
+            cCanvas.width = 750;
+            cCanvas.height = 500;
+            var context = cCanvas.getContext("2d");
+
+            context.font = "bold 28px 'GoodDogRegular'";  //this is very much like CSS font settings
+            context.textBaseline = "top";
+            context.fillText("Run spot, run!", 8, 5);
+        }
+    </script>
+
+</body>
+</html>

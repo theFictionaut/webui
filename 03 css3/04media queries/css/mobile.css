@@ -1,0 +1,258 @@
+﻿
+/* ==============
+    MOBILE First: Menu
+   ============== */
+
+
+
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 15px 0;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background: rgba(65, 13, 21, 0.41);
+}
+
+    nav a:hover,
+    nav a:visited {
+        color: white;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+/* ==============
+    MOBILE: Main
+   ============== */
+
+.main {
+    padding: 30px 0;
+}
+
+    .main article h1 {
+        font-size: 200%;
+    }
+
+    .main aside {
+        color: white;
+        padding: 0px 5% 10px;
+    }
+
+.footer-container footer {
+    color: white;
+    padding: 20px 0;
+}
+
+figure {
+    width: 100%;
+}
+
+
+    figure figcaption {
+        background-color: wheat;
+        text-align: center;
+        padding: 1%;
+        font-family: 'conspiracyregular';
+    }
+
+    figure img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+footer .social {
+    font-size: 150%;
+}
+
+
+/* ===================
+    ALL: BBQ Theme
+   =================== */
+
+.header-container {
+    border-bottom: 20px solid rgba(65, 13, 21, 0.21);
+}
+
+.footer-container,
+.main aside {
+    border-top: 20px solid rgba(65, 13, 21, 0.21);
+}
+
+.header-container,
+.footer-container,
+.main aside {
+    background: linear-gradient(to bottom, rgba(234,185,45,0.6) 0%,rgba(199,152,16,0.3) 100%);
+    /*padding-bottom: 2em;
+    padding-left: 0.5em;*/
+    font-family: 'conspiracyregular';
+    color: rgba(189, 166, 93, 0.9);
+}
+
+.title {
+    color: white;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'conspiracyregular';
+    color: wheat;
+    letter-spacing: 1%;
+}
+
+p {
+    line-height: 1.6;
+    color: wheat;
+}
+
+body {
+    background-image: url(../img/wood.jpg);
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+
+
+@media only screen and (min-width: 480px) {
+
+    /* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+
+    nav a {
+        float: left;
+        width: 27%;
+        margin: 0 1.7%;
+        padding: 25px 2%;
+        margin-bottom: 0;
+    }
+
+    nav li:first-child a {
+        margin-left: 0;
+    }
+
+    nav li:last-child a {
+        margin-right: 0;
+    }
+
+    /* ========================
+    INTERMEDIATE: IE Fixes
+   ======================== */
+
+    nav ul li {
+        display: inline;
+    }
+
+    .oldie nav a {
+        margin: 0 0.7%;
+    }
+
+
+
+    .two-col {
+        -moz-column-count: 2;
+        -moz-column-gap: 20px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 20px;
+        -moz-column-rule-color: #ccc;
+        -moz-column-rule-style: solid;
+        -moz-column-rule-width: 1px;
+        -webkit-column-rule-color: #ccc;
+        -webkit-column-rule-style: solid;
+        -webkit-column-rule-width: 1px;
+    }
+
+    footer .social {
+        font-size: 250%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+
+
+    /* ============
+    WIDE: Menu
+   ============ */
+
+    .title {
+        float: left;
+    }
+
+    nav {
+        float: right;
+        width: 38%;
+    }
+
+    /* ============
+    WIDE: Main
+   ============ */
+
+    .leftCol {
+        width: 57%;
+        float: left;
+    }
+
+    .main article, .main figure {
+        float: left;
+    }
+
+    .main aside {
+        float: right;
+        width: 28%;
+        min-height: 425px;
+    }
+
+    /* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+    .three-col {
+        -moz-column-count: 3;
+        -moz-column-gap: 20px;
+        -webkit-column-count: 3;
+        -webkit-column-gap: 20px;
+        -moz-column-rule-color: #ccc;
+        -moz-column-rule-style: solid;
+        -moz-column-rule-width: 1px;
+        -webkit-column-rule-color: #ccc;
+        -webkit-column-rule-style: solid;
+        -webkit-column-rule-width: 1px;
+    }
+
+    footer .social {
+        font-size: 450%;
+    }
+
+
+
+    .header-container,
+    .main aside, .main figure {
+        -webkit-box-shadow: 0 5px 10px #aaa;
+        -moz-box-shadow: 0 5px 10px #aaa;
+        box-shadow: 0 5px 10px #aaa;
+    }
+}
+
+@media only screen and (min-width: 1140px) {
+
+    /* ===============
+    Maximal Width
+   =============== */
+
+    .wrapper {
+        width: 1026px; /* 1140px - 10% for margins */
+        margin: 0 auto;
+    }
+}

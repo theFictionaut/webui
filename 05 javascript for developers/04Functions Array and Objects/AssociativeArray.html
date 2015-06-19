@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Associative Arrays</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+
+
+
+
+
+
+        var student = new Object();   //represent a student record
+        student["studentName"] = "Caroline";
+        student["studentEmail"] = "caroline@qa.com";
+        student["courseCode"] = "LGJAVASC3";
+        student.courseDuration = 4;
+        student.askQuestion = function (subject) {
+            alert(this.studentName + " asked about "  + subject);
+        }
+
+        student.askQuestion("objects");
+
+        console.dir(student);
+
+        //for (var key in window.navigator) {
+        //    console.log(window.navigator[key]);
+        //}
+
+
+
+
+
+
+
+
+
+        
+
+        
+        
+
+       
+        //var student2 = {
+        //    studentName: "Dave",
+        //    studentEmail: "dave@qa.com"
+        //}
+
+
+        //for (var key in student2) {
+        //    console.log(key + " : " + student2[key]);
+        //}
+
+
+
+
+        //student.courseDuration = 4;  //EXPANDO PROPERTY
+
+     //   for (var key in window.navigator) {
+     //       document.writeln(key + " : " + window.navigator[key] + "</br>");
+     //   }
+
+
+     //var anotherStudent = {studentName: "James", studentEmail: "james@somewhere.com", courseCode: "LGJAVASC3", duration: 4 };
+
+     //console.dir(anotherStudent);
+
+     //var classRoom = [student, anotherStudent];
+
+     //console.dir(classRoom);
+
+
+
+//        console.dir(student);
+
+
+//        for (var indexer in student) {
+//            console.log(indexer + " : " + student[indexer]);
+//        }
+
+
+//        //        for (var i = 0; i < student.length; i++) {
+//        //            console.log(student[i]);
+//        //        }
+
+//        var theClass = [student, anotherStudent, { studentName: "Bob"}];
+
+//     
+
+//        console.log(theClass[0].qualifications[0]);
+
+
+
+        //        var student = new Object();
+
+        //        student["name"] = "Caroline";
+        //        student["id"] = 1234;
+        //        student["courseCode"] = "LGJAVSC3";
+
+        //        var student2 = { name: "David", id: 1235, courseCode: "LGJAVSC3" };
+
+
+        //        for (var key in student) {
+        //            console.log(key + " : " + student[key]);
+        //        }
+
+
+        if (x == null) {
+            alert("match");
+        }
+
+
+        var classRoom = [
+                          { name: "David", id: 1235, courseCode: "LGJAVSC3" },
+                          { name: "Caroline", id: 1234, courseCode: "LGJAVSC3" }
+                         ];
+
+       console.dir(classRoom);
+
+
+                for (var i = 0; i < classRoom.length; i++) {
+                    for (var key in classRoom[i]) {
+                        console.log(key + " : " + classRoom[i][key]);
+                    }
+                }
+
+
+    </script>
+    <p id="intro">
+        ...</p>
+</body>
+</html>

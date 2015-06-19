@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Menu Example</title>
+</head>
+<body>
+    <menu>
+        <command onclick="alert('Hello World')">
+            <p>
+                Click Me!</p>
+        </command>
+        <command onclick="alert(this.innerText)">
+Click Me also!
+<br /></command>
+        <command onclick="alert('Hello World')">
+Click Me!
+<br /></command>
+    </menu>
+    <br />
+    <menu label="Fruit List">
+        <command type="radio" radiogroup="fruitlist" label="Apple">
+        <input type="radio" value="a" name="fruitlist" />
+        <a></a>
+        <command type="radio" radiogroup="fruitlist" label="Orange" />
+        <command type="radio" radiogroup="fruitlist" label="Banana" />
+    </menu>
+</body>
+</html>

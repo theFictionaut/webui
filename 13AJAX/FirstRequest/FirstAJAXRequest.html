@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+
+
+</head>
+
+<body>
+
+  
+<input type="button" id="btnFirst" value="Click me" onclick="doCall()" />
+<div id="output"></div>
+<script type="text/javascript">
+
+
+
+    var b = document.getElementById("btnFirst");
+
+  
+
+   
+
+    function doCall() {
+
+       // var request = new XMLHttpRequest();
+       // console.dir(request);
+        b.disabled = true;
+
+        var request = new XMLHttpRequest();
+        console.dir(request);
+        request.open("GET", "FirstHandler.ashx", true);
+        request.send();
+        request.onreadystatechange = function () {
+
+
+            if (request.readyState == 4 && request.status == 200) {
+                console.dir(request);
+                document.getElementById('output').innerHTML =
+                    request.responseText +
+                     "<br />" + request.status +
+                     "<br />" + request.statusText
+                     ;
+                b.disabled = false;
+               
+            }
+
+
+
+        }
+
+       
+
+    }
+
+   
+</script>
+
+
+
+</body>
+</html>

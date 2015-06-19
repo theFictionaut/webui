@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Sparse Arrays and a For Loop</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        var a = ["hello", "world", false, 2, []];
+        a[0] = "hello";
+        a[1] = "world";
+        a[20] = "will this work?";
+        console.log(a);
+        console.dir(a);
+
+        for (var i = 0; i < a.length; i++) {
+            console.log(a[i]);
+        }
+
+
+        //var b = [];
+        //b[b.length] = 55;
+        //b[b.length] = 33;
+        //b[200];
+        //console.log(b);
+
+
+
+
+//        var a = new Array("Gareth", false, 5);
+//        var b = new Array();
+//        var c = ["Gareth", false, 5];
+//        c[20] = "thingmebobs";
+
+////        for (var i = 0; i < c.length; i++) {
+////            console.log(c[i]);
+////        }
+
+
+//        for (var i in c) {
+//            console.log(c[i]);
+//        }
+
+//        //cloneing a refrence to an object
+//        var d = c;
+
+//        alert(d[0]);
+
+      
+
+      //  console.log(c[15]);
+
+
+//        for (var i = 0; i < c.length; i++) {
+//            console.log(c[i]);
+//        }
+       // console.dir(c);
+
+        //console.log(c);
+        //console.dir(c);
+        //console.log(a === b);
+
+
+
+
+//        b[b.length] = "Dave";
+//        b[b.length] = null;
+//        b[b.length] = "Adam";
+//        b[b.length] = "Dan";
+//        b[b.length] = "ello";
+////        b[50] = "now very large!";
+//        console.dir(b);
+//       b.reverse()
+//       console.dir(b);
+
+//        for (var i in b) {
+//            console.log(b[i]); 
+//        }
+
+//        for (var i = 0; i < b.length; i++) {
+//            if (b[i]) {
+//                console.log(i + " : " + b[i]);
+//           }
+//            
+//        }
+
+
+//        console.dir(a);
+//        console.dir(b);
+//        console.dir(c);
+
+//        //creates a 5 element array [0] to [4]
+//        var classRoom = new Array(5);
+
+//        //acces an array element by its index within square brackets
+//        classRoom[0] = "Dave";
+//        classRoom[4] = "Laurence";  
+//        //note we have not set elements [1] through [3]
+
+//        //note the use of the for loop here arrays have a length property 
+//        //that returns the current length as an integer
+//        for (var i = 0; i < classRoom.length; i++) {
+//            //what will the value of classRoom[2] be?
+//            console.log(classRoom[i]);
+//        }
+    
+    
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <img id="myImage" src="image.gif" alt="An image" title="This is an image"/>
+
+    <script>
+
+        var img = document.querySelector('#myImage');
+
+        img.width = 450;
+        img.height = 450;
+        img.alt = "new alt";
+        img.style["border-color"] = 'pink';
+        img.style["borderWidth"] = 1;
+        img.style.borderStyle = 'solid';
+
+
+        console.dir(img);
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Working with colours</title>
+  <style>
+  
+    body {
+      font-family: arial, verdana;
+      font-size: 12px;
+    }
+  
+	svg {
+		display: block;
+		border: 2px solid darkblue;
+		background-color: rgba(0, 255, 0, 0.25);
+		width: 600px;
+		height: 600px;
+	}
+
+  </style>
+	
+</head>
+
+<body>
+	
+	<h1>Working with gradients and patterns</h1> 
+	<br/>
+  
+	<svg xmlns="http://www.w3.org/2000/svg">
+	
+		<!-- Define some gradients and patterns, for use later -->
+		<defs>
+			<!-- You can specify gradients using fractions or percentages of target object itself -->
+			<linearGradient id="gradient1a" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="objectBoundingBox">  
+				<stop offset="0.2" stop-color="yellow" />
+				<stop offset="0.5" stop-color="green" />
+				<stop offset="1.0" stop-color="red" />
+			</linearGradient>
+
+			<!-- You can also specify gradients using the overall coordinate system -->
+			<linearGradient id="gradient1b" x1="300" y1="0" x2="600" y2="0" gradientUnits="userSpaceOnUse">
+				<stop offset="0.2" stop-color="yellow" />
+				<stop offset="0.5" stop-color="green" />
+				<stop offset="1.0" stop-color="red" />
+			</linearGradient>
+
+			<radialGradient id="gradient2" fx="0.3" fy="0.3" gradientUnits="objectBoundingBox">
+				<stop offset="0.1" stop-color="yellow"  />
+				<stop offset="0.7" stop-color="red" />
+			</radialGradient>
+			
+			<pattern id="qa" patternUnits="userSpaceOnUse" width="40" height="40"> 
+				<image xlink:href="qa.jpg" x="0" y="0" width="40" height="40" />
+			</pattern> 
+			
+		</defs>
+  
+		<!-- Draw left-hand side shapes -->
+		<circle cx="100" cy="100" r="80" fill="url(#gradient1a)" />
+		<circle cx="100" cy="300" r="80" fill="url(#qa)" />
+		<circle cx="100" cy="500" r="80" fill="url(#gradient2)" />
+
+		<!-- Draw middle shapes -->
+		<circle cx="300" cy="100"  r="80" fill="url(#gradient1b)" />
+		<circle cx="300" cy="300" r="80" fill="url(#qa)" />
+		<circle cx="300" cy="500" r="80" fill="url(#gradient2)" />
+
+		<!-- Draw right-hand side shapes -->
+		<circle cx="500" cy="100"  r="80" fill="url(#gradient1b)" />
+		<circle cx="500" cy="300" r="80" fill="url(#qa)" />
+		<circle cx="500" cy="500" r="80" fill="url(#gradient2)" />
+
+	</svg>
+ 
+</body>
+</html>

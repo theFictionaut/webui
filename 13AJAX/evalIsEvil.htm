@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <form action=""></form>
+    <script type="text/javascript">
+        //"use strict";
+
+
+        //var myobj = '({ "keyname": "value", "key2": "value2" })';
+
+        //var p = eval(myobj);
+        //console.dir(myobj);
+        //console.dir(p);
+        
+        //(function () { document.forms[0].action = 'hacked' })()
+
+
+       var o = "({ key: 'stuff', goBoom: (function () { document.forms[0].action = 'hacked'})()})";
+
+       var myJSONObject = { "searchResults": [
+            { "productName": "Aniseed Syrup", "unitPrice": 10 },
+            { "productName": "Alice Mutton", "unitPrice": 39 }
+        ]};
+
+       var s = JSON.stringify(myJSONObject);
+
+       console.log(s);
+
+       var p = JSON.parse(o);
+
+       //console.dir(myJSONObject);
+
+       // //var parsed = JSON.parse(o);
+
+       // console.dir(p);
+        //var o = [{ 'key': 'stuff', 'goBoom': 5 }, { 'key': 'stuff', 'goBoom': 5}];
+
+
+        //var parsed = JSON.stringify(o);
+
+       // console.dir(o);
+
+        //var parsed = eval(o);
+
+       //console.dir(parsed);
+
+       // var uhoh = JSON.parse(parsed);
+       // console.dir(uhoh);
+    
+    </script>
+
+
+
+</body>
+</html>

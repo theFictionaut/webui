@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Canvas Image Example</title>
+</head>
+<body>
+    <canvas id="can" width="300" height="225">
+    </canvas>
+    <!--<img src="QALogo.jpg" width="200" height="200" alt="QA Logo" id="QALogo" />-->
+    <canvas id="target" width="500" height="375">
+    </canvas>
+    <script type="text/javascript">
+
+
+        window.onload = function () {
+            var canvas = document.getElementById("target");
+
+            var context = canvas.getContext("2d");
+            var logo = new Image();
+            logo.src = "santa.jpg";
+            logo.onload = function () {
+               // context.drawImage(logo, 0, 0);
+                for (var x = 0, y = 0; x < 500 && y < 375; x += 50, y += 75) {
+                    //context.restore();
+                    context.drawImage(logo, x, y, 50, 50);
+                  //  context.save();
+                }
+
+            }
+
+            canvas.toDataURL('image/png');
+
+            ////clone
+            //var logo = document.getElementById("QALogo");
+            //context.drawImage(logo, 0, 0);
+
+            //            for (var x=0; y=0; x<500 && y <375; x +=50 y +=37){
+            //                context.drawImage(logo, x, y, 88, 56);
+            //            }
+
+
+
+        }
+    
+    </script>
+</body>
+</html>

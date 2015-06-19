@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Figure 14.4: Background sizing keywords</title>
+<style>
+body {
+    background: #fff;
+    color: #000;
+}
+
+div { /* for demostration purposes only */
+	float: left;
+	width: 130px;
+	height: 180px;
+	margin-right: 40px;
+	padding: 10px;
+	border: 1px solid #000;
+	text-shadow: #fff 1px 1px, #fff -1px -1px;
+}
+
+div.one {
+	background: url(images/background_sizing_tile.png) no-repeat top left;
+}
+div.two {
+	background: url(images/background_sizing_tile.png) no-repeat top left;
+	/* for Firefox */
+	-moz-background-size: cover;
+	/* for Safari and Chrome */
+	-webkit-background-size: cover;
+	/* for Opera */
+	-o-background-size: cover;
+	/* W3C specs */
+	background-size: cover;
+}
+div.three {
+	background: url(images/background_sizing_tile.png) no-repeat top left;
+	/* for Firefox */
+	-moz-background-size: contain;
+	/* for Safari and Chrome */
+	-webkit-background-size: contain;
+	/* for Opera */
+	-o-background-size: contain;
+	/* W3C specs */
+	background-size: contain;
+}
+
+
+</style>
+</head>
+<body>
+<div class="one">
+	Background with no background sizing
+</div>
+<div class="two">
+	Background with background-size set to cover
+</div>
+<div class="three">
+	Background with background-size set to contain
+</div>
+
+</body>
+</html>

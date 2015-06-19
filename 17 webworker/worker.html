@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        var worker = new Worker('worker.js');
+
+        worker.onmessage = function (event) {
+            console.dir(event);
+            alert(event.data);
+                
+        }
+
+        //worker.addEventListener('message', function (event) {
+        //    alert(event.data);
+        //}, false);
+
+        function callWorker(msg) {
+            worker.postMessage(msg); // start the worker.
+        }
+
+        </script>
+
+<pre>
+
+    HTML5 Example - Worker
+</pre>
+<div id="mainDiv" style="text-align: center;">
+  <button onclick="callWorker('hello world')">
+    Send to Worker.
+  </button>
+ These aren't the droids you're looking for.
+ - Move along... move along.</div>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+    //if statments
+
+        var loggedIn = false;
+
+        if (loggedIn === true) {
+            console.log("User stuff is done");
+            console.log("will I be seen");
+        }
+
+
+
+
+        var age = 15;
+
+        if (age >= 17 && age <= 65) {
+            console.log("MAIN BRANCH - Age is in range");
+        } else if (age <= 17) {
+            console.log("ALTERNATIVE BRANCH - conditional Under age");
+
+        } else {
+            console.log("ELSE conditionless catch all");
+        }
+
+
+  
+
+
+
+
+
+    </script>
+
+    <script type="text/javascript">
+//        //switch statments
+
+        var now = new Date();
+        console.log(now);
+        var dayOfWeek = now.getDay();
+        console.log(dayOfWeek);
+        switch (dayOfWeek) {
+            case 0:
+                console.log("it is Sunday");
+                break;
+            case 6:
+                console.log("It is Saturday");
+                break;
+            case 1:
+            case 2:
+                console.log("Its a Tuesday");
+            case 3:
+            case 4:
+            case 5:
+                console.log("It is a weekday");
+                break;
+            default:
+                console.log("invalid range");
+                break;
+        }
+
+
+//        switch (dayOfWeek) {
+//            case 0:
+//                console.log("it is Sunday");
+//                break;
+//            case 6:
+//                console.log("It is Saturday");
+//                break;
+//            case 1:
+//                console.log("its a monday");
+//            case 2:
+//            case 3:
+//            case 4:
+//            case 5:
+//                console.log("It is a weekday");
+//                break;
+//            default:
+//                console.log("invalid range");
+//                break;
+//        }
+
+    
+    
+    
+    
+    </script>
+
+    <script type="text/javascript">
+        //loops and termination
+
+        for (var i = 0; i < 3; i++) {
+
+            if (i === 1) {
+                continue;
+            }
+            if (i === 2) {
+                break;
+            }
+
+        }
+
+    
+    
+    
+    </script>
+    
+
+
+
+
+
+</body>
+</html>

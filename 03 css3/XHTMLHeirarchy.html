@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Examining HTML5 Outlines</title>
+    <meta charset="utf-8" />
+    <style>
+       
+        article > p { background-color:orange;
+        }
+
+        article  p { background-color:red;
+        }
+        h2 ~ p {
+            background-color: green;
+        }
+
+        p:first-letter, p::first-letter {
+            color: azure;
+            font-size: 1.4em;
+        }
+
+        p:after {
+            content: "Hello!";
+            color: pink;
+        }
+
+        section > p:not(:first-of-type) {
+            background-color:silver;
+
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    <div>
+        <header>
+            <hgroup>
+                <h1>
+                    Web Design</h1>
+                <h2>
+                    Introduction to HTML5</h2>
+            </hgroup>
+            <div>
+                <p>
+                    Some general info about web design</p>
+            </div>
+        </header>
+        <section>
+            
+            
+            <h2>
+                Layout</h2>
+            <p>
+                Info about layouts</p>
+             <p>
+                Info about layouts</p>
+             <p>
+                Info about layouts</p>
+             <p>
+                Info about layouts</p>
+             <p>
+                Info about layouts</p>
+             <p>
+                Info about layouts</p>
+
+            <article>
+                <h3>
+                    Grids</h3>
+                <p>
+                    Info about grids</p>
+            </article>
+            <article>
+                <h2>
+                    Typography</h2>
+                <p>
+                    Info about typography</p>
+            </article>
+            <article>
+                <h2>
+                    Color</h2>
+                <p>
+                    Info about color</p>
+                <section>
+                    <h3>Alpha colours</h3>
+                    <p>info about the alpha chanel</p>
+
+
+                </section>
+            </article>
+
+            <aside>
+                <h2>
+                    CSS Color choices</h2>
+                <dl>
+                    <dt>RGB</dt>
+                    <dd>Using the rgb(r,g,b) css rule you can set color</dd>
+                    <dt>HEX</dt>
+                    <dd>The most common way of setting color</dd>
+                    <dt>HSL</dt>
+                    <dd>A new CSS3 color option</dd>
+                </dl>
+            </aside>
+        
+        
+        </section>
+        <section>
+            <h2>
+                Design Principles</h2>
+            <ul>
+                <li>List of</li>
+                <li>several different</li>
+                <li>design principles</li>
+            </ul>
+        </section>
+        <p>
+            Where in the outline does this paragraph belong?</p>
+    </div>
+</body>
+</html>

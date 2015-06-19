@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Untitled Page</title>
+    <script type="text/javascript">
+        function Pet(name, species, hello) {
+
+            this._name = name;
+
+            this._species = species;
+
+            this._hello = hello;
+
+        }
+
+
+        Pet.prototype = {
+
+            sayHello: function () {
+
+                alert(this._hello);
+
+            }
+
+        }
+        
+
+    </script>
+    <script type="text/javascript">
+
+        function Cat(name, hello, breed, whiskerLength) {
+
+            this._name = name;
+
+            this._species = "Cat";
+
+            this._hello = hello;
+
+            this._breed = breed;
+
+            this._whiskerLength = whiskerLength;
+
+        }
+
+        //chained constructor
+
+        Cat.prototype = new Pet();
+
+
+        //child exension (expando property)
+
+        Cat.prototype.catNap = function () {
+
+            alert(this._name + ": zzzzz…");
+
+        }
+
+
+        //overide
+        Cat.prototype.sayHello = function () {
+
+            alert(this._hello + " from a cat..");
+
+        }
+
+    
+    </script>
+</head>
+<body>
+    <div id="output">
+    </div>
+    <script type="text/javascript">
+        //instantiating a new Pet object
+        var Fido = new Pet('Fido', 'Corgi', 'woof!');
+
+        //querySelector is an alternative to getElementById
+        var op = document.querySelector('#output');
+
+        //variable to build up our output
+        var s = "";
+
+        //for in loops walk over key value pair arrays
+        //objects, functions and arrays are interlinked
+        for (var key in Fido) {
+            s += '<p>' + Fido[key] + '</p>';
+
+        }
+
+        //write output to our div
+        op.innerHTML += s;
+
+        //Fido.sayHello();
+
+        var Meg = new Cat('Meg', 'miaow', 'moggie', 30);
+        //Meg.sayHello();
+        // Meg.catNap();
+
+        var petStore = [Fido, Meg];
+
+        for (var i = 0; i < petStore.length; i++) {
+            petStore[i].sayHello();
+            if (petStore[i] instanceof Cat) {
+                petStore[i].catNap();
+            }
+        }
+       
+    </script>
+</body>
+</html>

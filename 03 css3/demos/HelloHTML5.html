@@ -1,0 +1,89 @@
+﻿<!doctype html />
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Exploring HTML5</title>
+    <style>
+        header, nav, footer, article
+        {
+            border: 1px solid #000000;
+            display: block;
+        }
+        nav
+        {
+            float: left;
+            width: 25%;
+        }
+        article
+        {
+            float: right;
+            width: 74%;
+        }
+        footer
+        { 
+            clear: both;
+        }
+    </style>
+    <script type="text/javascript">
+        document.createElement("header");
+        document.createElement("nav");
+        document.createElement("article");
+        document.createElement("footer");
+    </script>
+</head>
+<body>
+    <header>
+        <h1>
+            The HTML5 Structure</h1>
+        <h2>
+            Exploring the new structural tags of HTML5</h2>
+    </header>
+    <nav>
+        <h1>
+            Links</h1>
+        <ul>
+            <li><a href="HelloHTML5.html">Home</a></li>
+            <li><a href="http://www.qa.com">QA</a></li>
+        </ul>
+    </nav>
+    <article>
+        <h1>
+            From the HTML5 spec</h1>
+        <section>
+            <h2>
+                What is a header</h2>
+            <p>
+                A group of introductory or navigational aids. A header element typically contains
+                the section’s heading (an h1–h6 element or an hgroup element), but can also contain
+                other content, such as a table of contents, a search form, or any relevant logos.
+            </p>
+        </section>
+        <section>
+            <h2>
+                What are articles</h2>
+            <p>
+                The article element represents a component of a page that consists of a self-contained
+                composition in a document, page, application, or site and that is intended to be
+                independently distributable or reusable, e.g. in syndication. This could be a forum
+                post, a magazine or newspaper article, a blog entry, a user-submitted comment, an
+                interactive widget or gadget, or any other independent item of content.
+            </p>
+        </section>
+        <section>
+            <h2>
+                What is nav</h2>
+            <p>
+                The nav element represents a section of a page that links to other pages or to parts
+                within the page: a section with navigation links. Not all groups of links on a page
+                need to be in a nav element only sections that consist of major navigation blocks
+                are appropriate for the nav element. In particular, it is common for footers to
+                have a list of links to various key parts of a site, but the footer element is more
+                appropriate in such cases, and no nav element is necessary for those links.
+            </p>
+        </section>
+    </article>
+    <footer>
+        &copy; <a href="http://www.qa.com" target="_blank">QA</a> 2010 
+    </footer>
+</body>
+</html>

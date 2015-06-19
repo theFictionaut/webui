@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+
+
+</head>
+
+<body>
+<span id="s1" style="display: none":>Working on it.... <img src="9-0.gif" /></span>
+    <div id="output"></div>
+<input type="button" id="btnFirst" value="Click me" onclick="doCall()" />
+
+<script type="text/javascript">
+
+
+    var t = null;
+    var msg = document.getElementById("s1");
+    var b = document.getElementById("btnFirst");
+
+    function showMsg() {
+        console.log("timer");
+        msg.style.display = "inline";
+    }
+
+    function doCall() {
+
+       
+
+        var request = new XMLHttpRequest();
+       // console.dir(request);
+        
+      
+        request.open("GET", "FirstHandler.ashx", true);
+        request.send();
+        b.disabled = true;
+        t = setTimeout(showMsg, 1000);
+
+        request.onreadystatechange = function () {
+
+
+            if (request.readyState == 2) {
+               
+                console.log("timer cancelled");
+                clearTimeout(t);
+            }
+
+            console.log("hit");
+            if (request.readyState == 4 && request.status == 200) {
+                console.dir(request);
+                document.getElementById('output').innerHTML = request.responseText +
+                     "\n" + request.status +
+                     "\n" + request.statusText
+                     ;
+                b.disabled = false;
+                if (msg.style.display == 'inline') {
+                    msg.style.display = 'none';
+                }
+            }
+
+
+
+        }
+
+       
+
+    }
+
+   
+</script>
+
+
+
+</body>
+</html>

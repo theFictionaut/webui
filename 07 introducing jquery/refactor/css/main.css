@@ -1,0 +1,502 @@
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+figure {
+            background: #f6f8f9; /* Old browsers */
+            background: -moz-linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6f8f9), color-stop(50%,#e5ebee), color-stop(51%,#d7dee3), color-stop(100%,#f5f7f9)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); /* IE10+ */
+            background: linear-gradient(to bottom, #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); /* W3C */
+            margin-top: 50px;
+            box-sizing: border-box;
+            border: 3px solid rgba(0,0,0,0.6);
+            padding: 10px 10px 30px 10px;
+            width: 373px;
+            margin-bottom: 50px;
+            -webkit-box-shadow: 10px 10px 3px 3px rgba(0, 0, 0, 0.2);
+            box-shadow: 10px 10px 3px 3px rgba(0, 0, 0, 0.2);
+            transform: rotate(19deg);
+            -webkit-transform: rotate(19deg);
+            -moz-transform: rotate(19deg);
+            -o-transform: rotate(19deg);
+            -ms-transform: rotate(19deg);
+            /* for Firefox 4 */
+            -moz-transition: -moz-transform 0.5s ease-out;
+            /* for Safari and Chrome */
+            -webkit-transition: -webkit-transform 0.5s ease-out;
+            /* For Opera */
+            -o-transition: -o-transform 0.5s ease-out;
+            /* W3C specification */
+            transition: transform 0.5s ease-out;
+        }
+
+        figcaption {
+            text-align: center;
+            margin-top: 25px;
+            font-family: 'JournalRegular', Arial, sans-serif;
+            font-size: 48px;
+        }
+
+
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+header h1 { margin-bottom: -0.5em;
+}
+
+h1, h2, h3 {
+
+    font-family: 'ChunkFiveRegular' , Arial, sans-serif;
+}
+
+    h1 + p, h2 + p {
+        color: rgba(136, 176, 199, 0.61);
+        padding-top: 0.2em;
+
+    }
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    /*resize: vertical;*/
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ===== Initializr Styles ==================================================
+   Derived from Initilizr  by David Walker  Original Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+body {
+    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+}
+
+/* ===================
+    Colours To change
+   =================== */
+
+.header-container {
+    border-bottom: 20px solid #b3d4fc;
+}
+
+.footer-container,
+.main aside {
+    border-top: 20px solid #b3d4fc;
+}
+
+.gradient{
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZDRlNGVmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzg2YWVjYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+    background: -moz-linear-gradient(-45deg, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(212,228,239,1)), color-stop(100%,rgba(134,174,204,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg, rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg, rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg, rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%); /* IE10+ */
+    background: linear-gradient(135deg, rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%); /* W3C */
+}
+
+.title {
+    color: white;
+}
+
+/* ==============
+    MOBILE: Menu
+   ============== */
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 15px 0;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background: #b3d4fc;
+}
+
+    nav a:hover,
+    nav a:visited {
+        color: white;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+/* ==============
+    MOBILE: Main
+   ============== */
+
+.main {
+    padding: 30px 0;
+}
+
+    .main article h1 {
+        font-size: 2em;
+    }
+
+    .main aside {
+        color: white;
+        padding: 0px 5% 10px;
+    }
+
+.footer-container footer {
+    color: white;
+    padding: 20px 0;
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   Author's custom styles - Font faces
+   ========================================================================== */
+@font-face {
+    font-family: 'SeasideResortNFRegular';
+    src: url('fonts/SeasideResortNF-fontfacekit/SEASRN__-webfont.eot');
+    src: url('fonts/SEASRN__-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/SEASRN__-webfont.woff') format('woff'),
+         url('fonts/SEASRN__-webfont.ttf') format('truetype'),
+         url('fonts/SEASRN__-webfont.svg#SeasideResortNFRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ChunkFiveRegular';
+    src: url('fonts/Chunkfive-webfont.eot');
+    src: url('fonts/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Chunkfive-webfont.woff') format('woff'),
+         url('fonts/Chunkfive-webfont.ttf') format('truetype'),
+         url('fonts/Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'JournalRegular';
+    src: url('fonts/journal-webfont.eot');
+    src: url('fonts/journal-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/journal-webfont.woff') format('woff'),
+         url('fonts/journal-webfont.ttf') format('truetype'),
+         url('fonts/journal-webfont.svg#JournalRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+    /* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+
+    nav a {
+        float: left;
+        width: 27%;
+        margin: 0 1.7%;
+        padding: 5px 2%;
+        margin-bottom: 0;
+    }
+
+    nav li:first-child a {
+        margin-left: 0;
+    }
+
+    nav li:last-child a {
+        margin-right: 0;
+    }
+
+    /* ========================
+    INTERMEDIATE: IE Fixes
+   ======================== */
+
+    nav ul li {
+        display: inline;
+    }
+
+    .oldie nav a {
+        margin: 0 0.7%;
+    }
+}
+@media only screen and (max-width: 910px) {
+
+        .title {
+      
+        font: 2em 'ChunkFiveRegular' , Arial, sans-serif;letter-spacing: 0;
+        text-align: center;
+    }
+
+    header h1 {
+        margin-bottom: 0.5em;
+
+    }
+    
+}
+
+
+@media only screen and (min-width: 910px) {
+
+    /* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+    .header-container,
+    .main aside {
+        -webkit-box-shadow: 0 5px 10px #aaa;
+        -moz-box-shadow: 0 5px 10px #aaa;
+        box-shadow: 0 5px 10px #aaa;
+    }
+
+    /* ============
+    WIDE: Menu
+   ============ */
+
+    .title {
+        float: left;
+        font: 48px 'ChunkFiveRegular' , Arial, sans-serif;letter-spacing: 0;
+    }
+
+    nav {
+        float: right;
+        width: 38%;
+    }
+
+    /* ============
+    WIDE: Main
+   ============ */
+
+    .main article {
+        float: left;
+        width: 57%;
+    }
+
+    .main aside {
+        float: right;
+        width: 28%;
+        height: 50px;
+        max-height: 350px;
+        resize: vertical;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (min-width: 1140px) {
+
+    /* ===============
+    Maximal Width
+   =============== */
+
+    .wrapper {
+        width: 1026px; /* 1140px - 10% for margins */
+        margin: 0 auto;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+    .ir:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 150%;
+    }
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+    .visuallyhidden.focusable:active,
+    .visuallyhidden.focusable:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+    }
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+        a[href]:after {
+            content: " (" attr(href) ")";
+        }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

@@ -1,0 +1,26 @@
+﻿body 
+{
+    font-family:Sans-Serif;
+    background-color:#666;
+    color:#fff;
+}
+input#searchTextBox
+{
+    color:#000;
+    font-weight:bold;
+    background-color:#ff9;
+}
+span
+{
+    font-weight:bold;
+}
+ul li
+{
+    list-style-type:none;
+    list-style-position:outside;
+    color:#fff;
+}
+button
+{
+    margin-left:4px;
+}

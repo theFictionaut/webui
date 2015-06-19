@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        .interacted:invalid {
+            border: 1px solid red;
+        }
+
+        .interacted:valid {
+            border: 1px solid green;
+        }
+    </style>
+
+</head>
+<body>
+    <form>
+        <input type="text" required />
+        <input type="text" />
+        <input type="submit" />
+    </form>
+
+    <script>
+        var inputs = document.querySelectorAll('input[type=text]');
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].addEventListener('blur', function (event) {
+                event.target.classList.add('interacted');
+            }, false);
+        }
+
+
+    </script>
+</body>
+</html>

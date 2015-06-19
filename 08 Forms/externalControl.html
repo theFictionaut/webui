@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <form id="myForm" action="externalControl.html" method="get" spellcheck>
+        <br />
+
+        <input type="search" x-webkit-speech />
+
+        <br />
+        <label for="website">Please enter a url:</label><input name="website" type="url" required placeholder="Please enter a URL" /><br />
+
+        <input type="range" min="0" max="30" step="1" /><span id="sliderVal"></span>
+        <br />
+        <input type="date" />
+        <br />
+        <input type="color" />
+        <br />
+        <br />
+
+        <input type="text" required title="Please enter a UK postcode" pattern="[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}" />
+
+
+        <input type="text" />
+        <input type="submit" value="click!" />
+       <br />Broswer choice: <input type="text" list="browsers" />
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Google Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+
+    </form>
+    <hr />
+    <!-- not supported in all browsers -->
+    <input name="myVal" type="text" form="myForm" />
+
+    <script>
+        var s = document.querySelector('input[type=range]');
+
+        s.addEventListener('change', function () {
+            document.querySelector('#sliderVal').innerText = this.value;
+        }, false);
+
+    </script>
+
+</body>
+</html>

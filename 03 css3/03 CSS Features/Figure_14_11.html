@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Figure 14.11: transform-origin examples</title>
+<style>
+
+body {
+    background: #fff;
+    color: #000;
+}
+
+div { /* for demonstration purposes only */
+	position: absolute;
+	top: 250px;
+	left: 250px;
+}
+
+
+div {
+	height: 50px;
+	width: 50px;
+	border: 1px solid #000;
+	-moz-transform-origin: -100% -100%;
+}
+div.one {
+	border: 1px dashed #ccc;
+}
+div.two {
+	-moz-transform: rotate(45deg);
+}
+div.three {
+	-moz-transform: rotate(90deg);
+}
+div.four {
+	-moz-transform: rotate(135deg);
+}
+div.five {
+	-moz-transform: rotate(180deg);
+}
+div.six {
+	-moz-transform: rotate(225deg);
+}
+div.seven {
+	-moz-transform: rotate(270deg);
+}
+div.eight {
+	-moz-transform: rotate(315deg);
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="one">div one</div>
+<div class="two">div two</div>
+<div class="three">div three</div>
+<div class="four">div four</div>
+<div class="five">div five</div>
+<div class="six">div six</div>
+<div class="seven">div seven</div>
+<div class="eight">div eight</div>
+
+</body>
+</html>

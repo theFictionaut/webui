@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Canvas Gradient Example</title>
+</head>
+<body>
+    <canvas id="grad" width="400" height="300">
+    </canvas>
+    <script type="text/javascript">
+        var c = document.getElementById("grad");
+        var context = c.getContext("2d");
+
+        //radial
+        
+        var myGradient = context.createRadialGradient(0, 0, 10, 0, 50, 300);
+        myGradient.addColorStop(0, "black");
+        myGradient.addColorStop(1, "white");
+
+        context.fillStyle = myGradient;
+        context.fillRect(0, 0, 300, 225);
+        
+        /*
+
+        //        //horizontal
+               var myGradient = context.createLinearGradient(0, 0, 300, 0);
+               myGradient.addColorStop(0, "#369");
+               myGradient.addColorStop(1, "white");
+
+              context.fillStyle = myGradient;
+               context.fillRect(0, 0, 300, 225);
+               
+        //        // vertical
+                var myGradient = context.createLinearGradient(0, 0, 0, 225);
+                myGradient.addColorStop(0, "black");
+                myGradient.addColorStop(1, "white");
+
+                context.fillStyle = myGradient;
+               context.fillRect(0, 0, 300, 225);
+
+               */
+        //        // diagonal 
+        //        var myGradient = context.createLinearGradient(0, 0, 300, 225);
+        //        myGradient.addColorStop(0, "black");
+        //        myGradient.addColorStop(1, "white");
+
+        //        context.fillStyle = myGradient;
+        //        context.fillRect(0, 0, 300, 225);
+
+
+
+
+
+    </script>
+</body>
+</html>

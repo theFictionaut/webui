@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Working with text</title>
+	<style>
+
+		body {
+			font-family: arial, verdana;
+			font-size: 12px;
+		}
+
+		button {
+			background-color: yellow;
+			color: orange;
+			width: 130px;
+			height: 30px;
+			margin: 0px 10px 5px 0px;
+		}
+
+		svg {
+			display: block;
+			border: 2px solid darkblue;
+			width: 1100px;
+			height: 480px;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<h1>Working with text</h1>
+
+	<svg xmlns="http://www.w3.org/2000/svg" id="decoratedText">
+		<g font-size="38" fill="gold" stroke="green" stroke-width="2" font-family="calibri" font-weight="bold">
+			<text x="20" y="50">normal</text>
+			<text x="200" y="50" text-decoration="line-through">line-through</text>
+			<text x="430" y="50" text-decoration="underline">underline</text>
+			<text x="620" y="50" text-decoration="underline line-through">underline and line-through</text>
+		</g>
+
+		<path id="path1" d="M 20 250 C 150 450 250 50 350 150 C 450 250 550 350 650 250 C 750 150 850 150 1050 450" fill="none" stroke="orange" stroke-width="5"/>		
+		<text font-size="38" fill="orange" font-family="Verdana">
+			<textPath xlink:href="#path1">
+				<tspan>The area of a circle is PI * r </tspan>
+				<tspan dy="-30" fill="red" font-size="20">2</tspan>
+				<tspan dy="+30">and the volume of a sphere is PI * r </tspan>
+				<tspan dy="-30" fill="red" font-size="20">3</tspan>
+			</textPath>
+		</text>
+
+	</svg>
+
+</body>
+</html>

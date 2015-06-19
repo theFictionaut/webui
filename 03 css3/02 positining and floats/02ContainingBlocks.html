@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>origin example </title>
+<style>
+
+body {
+	background: #fff;
+	color: #000;
+}
+
+div {
+	border: 1px dotted #00f;
+	padding: 20px;
+}
+
+#containingBlock {
+	position: relative;
+	top: 50px;
+	left: 150px;
+}
+
+
+#innerPositionedBox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #000;
+}
+
+
+</style>
+</head>
+<body>
+
+<div id="containingBlock">
+	<div style="position: relative;">
+		<div>
+			<div id="innerPositionedBox">
+			</div>
+		</div>
+	</div>
+</div>
+<p> hi there I am a paragraph</p>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Figure 14.8: calc() example</title>
+<style>
+
+body {
+    background: #fff;
+    color: #000;
+}
+
+.container {
+	width: auto;
+	padding: 5px 107px 5px 5px; /* room for right sidebar */
+	border: 1px solid black;
+	background: none;
+	overflow: auto;
+}
+.main_left {
+	float: left;
+	height: 200px;
+	width: 48%;
+	margin-right: 5px;
+	border: 1px solid black;
+}
+.main_center {
+	float: left;
+	height: 120px;
+	width: 48%;
+	border: 1px solid black;
+}
+.right_sidebar {
+	float: right;
+	height: 180px;
+	width: 100px;
+	border: 1px solid black;
+	margin-right: -102px;
+}
+
+/* modifications to 7.9 using calc() */
+.main_left,
+.main_center {
+	/* for unsupported browsers */
+	width: 48%;
+	/* for Firefox 4 */
+	width: -moz-calc(50% - 7px);
+	/* W3C specs */
+	width: calc(50% - 7px);
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+	<div class="main_left">
+		.main_left
+	</div>
+	<div class="main_center">
+		.main_center
+	</div>
+	<div class="right_sidebar">
+		.right_sidebar
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Untitled Page</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        function cacheStatus() {
+            var appCache = window.applicationCache;
+
+            switch (appCache.status) {
+                case appCache.UNCACHED: // UNCACHED == 0
+                    return 'UNCACHED';
+                    break;
+                case appCache.IDLE: // IDLE == 1
+                    return 'IDLE';
+                    break;
+                case appCache.CHECKING: // CHECKING == 2
+                    return 'CHECKING';
+                    break;
+                case appCache.DOWNLOADING: // DOWNLOADING == 3
+                    return 'DOWNLOADING';
+                    break;
+                case appCache.UPDATEREADY:  // UPDATEREADY == 4
+                    return 'UPDATEREADY';
+                    break;
+                case appCache.OBSOLETE: // OBSOLETE == 5
+                    return 'OBSOLETE';
+                    break;
+                default:
+                    return 'UKNOWN CACHE STATUS';
+                    break;
+            };
+        }
+
+        alert(cacheStatus());
+
+    </script>
+    <svg id="svgelem" height="200" xmlns="http://www.w3.org/2000/svg">
+        <circle id="redcircle" cx="50" cy="50" r="50" fill="red" />
+    </svg>
+    <svg id="svg1" height="200" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="0" x2="200" y2="100" style="stroke: red; stroke-width: 2" />
+    </svg>
+    <svg id="svg2" height="200" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="20,10 300,20, 170,50" fill="red" />
+    </svg>
+    <svg id="svg3" height="200" xmlns="http://www.w3.org/2000/svg">
+        <rect id="ani1" x="10" y="10" width="80" height="55" rx="10" ry="10" fill="blue">
+            <set begin="click" attributename="fill" to="yellow" />
+            <set begin="mouseout" attributename="fill" to="blue" />
+        </rect>
+    </svg>
+</body>
+</html>

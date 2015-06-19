@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+   
+    <script type="text/javascript">
+        function doCall() {
+            //Variablee decs
+            var lbl = document.getElementById("lblAnswers");
+            var data = document.getElementById("txtNumber");
+            var but = document.getElementById("btnPowers");
+
+            //XMLreq initalise
+            var req = new XMLHttpRequest();
+
+            //open
+            req.open("POST", "PowersHandler.ashx?", true);
+
+            //set request
+            req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+            //invoke send with qstring
+            req.send("number=" + data.value);
+
+            //set button disabled until ajax response
+            but.disabled = true;
+
+            //anonymous function
+            req.onreadystatechange = function () {
+                //wait until response
+                if (req.readyState == 4) {
+
+                    
+
+                    //JSON return
+                    //var oput = eval(req.responseText);
+
+
+                    var oput = JSON.parse(req.responseText);
+                    console.dir(oput);
+                    var s = "";
+                    for (var m in oput) {
+                        s = s + oput[m] + "\n";
+                    }
+
+                    lbl.innerHTML = s
+
+                    but.disabled = false;
+                }
+            }
+
+
+
+        }
+    </script>
+
+</head>
+<body>
+    <input type="text" id="txtNumber" />
+    <input type="button" id="btnPowers" onclick="doCall()" value="Clicky" />
+    <p id="lblAnswers">
+        Answer goes here
+    </p>
+</body>
+</html>

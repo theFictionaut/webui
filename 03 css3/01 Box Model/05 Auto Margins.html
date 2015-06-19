@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> centering with auto margins</title>
+<style>
+body {
+	background: #FFF;
+	color: #000;
+    margin: 0;
+}
+div {
+	width: 50%;
+	/*border: 1px solid #000;*/
+    margin-left: 5px;
+	margin-bottom: 6px;
+    float: left;
+    
+}
+p {
+	width:50%;
+	background: #CCC;
+}
+
+
+</style>
+</head>
+<body>
+<!--
+
+<div> is 500px
+<p> is 300px
+margin : Top, Right, Bottom, Left
+auto margin will fill the container
+
+-->
+
+<div>
+	<p style="margin: 0 0 0 0;">margin: 0 0 0 0;</p>
+</div>
+<div>
+    <p style="margin: 0 auto 0 0;">margin: 0 auto 0 0;</p>
+</div>
+<div>
+    <p style="margin: 0 auto 0 auto;">margin: 0 auto 0 auto;</p>
+</div>
+<div>
+	<p style="margin: 0 0 0 auto;">margin: 0 0 0 auto;</p>
+</div>
+
+
+</body>
+</html>

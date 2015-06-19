@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Transformations, animations, and events</title>
+	<style>
+
+		body {
+			font-family: arial, verdana;
+			font-size: 12px;
+		}
+
+		svg {
+			display: block;
+			border: 2px solid darkblue;
+			width: 400px;
+			height: 350px;
+		}
+			
+	</style>
+
+</head>
+
+<body>
+
+	<h1>Transformations</h1>
+  
+	<!-- Demonstrate transformations -->
+	<svg xmlns="http://www.w3.org/2000/svg" id="transformations" >
+		<defs>
+			<pattern id="trianglePattern" width="50" height="50" patternUnits="userSpaceOnUse">
+				<path d="M 0 0 L 50 50 L 0  50 Z" fill="red"    stroke="blue" />
+				<path d="M 0 0 L 50 0  L 50 50 Z" fill="yellow" stroke="blue" />
+			</pattern>
+		</defs>
+
+		<rect x="0" y="0" width="200" height="200" fill="url(#trianglePattern)"  stroke="blue" stroke-width="5" />
+
+		<!-- You can set the transform property to "translate", "scale", "rotate", "skewX", or "skewY" -->
+		<g transform="translate(200, 200)">
+			<g transform="scale(0.25)">
+				<rect x="0" y="0" width="200" height="200" fill="url(#trianglePattern)" stroke="green" stroke-width="5" />
+
+				<g transform="translate(320, 0), scale(2), skewX(-30)">
+						<rect x="0" y="0" width="200" height="200" fill="url(#trianglePattern)" stroke="purple" stroke-width="10" />
+				</g>
+
+			</g>
+		</g>
+	</svg>
+
+</body>
+</html>

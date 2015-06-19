@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Canvas Example</title>
+
+    <style>
+        canvas {
+            border: 1px solid black;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 dir="rtl">Hello world</h1>
+    <div id="blk" style="width: 70%;">
+
+        <canvas width="300" height="225" id="a" hidden ></canvas>
+    </div>
+    <script type="text/javascript">
+
+        var aCanvas = document.getElementById("a");
+        console.dir(aCanvas);
+
+        var theContext = aCanvas.getContext('2d');
+
+        console.dir(theContext);
+
+
+        theContext.fillRect(-10, -30, 50, 50);
+       theContext.clearRect(50, 50, 20, 20);
+       theContext.strokeRect(60, 60, 25, 25);
+
+
+        ///*
+
+
+        // var x = document.getElementById("blk");
+        // alert(x.width);
+        // aCanvas.width = x;
+        // alert(aCanvas.width);
+        // var w = aCanvas.width;
+
+        // var aContext = aCanvas.getContext("2d");
+
+        //aContext.strokeRect(1, 35, w-2, 100);
+        //*/
+    </script>
+
+
+    <canvas id="c" width="500" height="375"></canvas>
+
+    <script>
+
+        //  context.moveTo(x, y); //moves the 'pencil' to the starting point
+        //context.lineTo(x, y); //draws the line
+
+    </script>
+
+    <script>
+
+
+        var cCanvas = document.getElementById("c");
+        var context = cCanvas.getContext("2d");
+
+
+
+
+        //context.beginPath();
+
+        for (var x = 0.5; x < 500; x += 10) {
+            context.moveTo(x, 0);
+            context.lineTo(x, 375);
+        }
+
+
+        for (var y = 0.5; y < 375 ; y += 10) {
+            context.moveTo(0, y);
+            context.lineTo(500, y);
+
+        }
+
+        context.strokeStyle = 'rgba(230,20,10,0.5)';   //set the colour
+        context.stroke();               //draw the line 
+
+
+        context.beginPath();      //only needed for a new path
+        context.moveTo(0, 40);
+        context.lineTo(240, 40);
+        context.moveTo(260, 40);
+        context.lineTo(500, 40);
+        context.moveTo(495, 35);
+        context.lineTo(500, 40);
+        context.lineTo(495, 45);
+
+        context.moveTo(60, 0);
+        context.lineTo(60, 153);
+        context.moveTo(60, 173);
+        context.lineTo(60, 375);
+        context.moveTo(65, 370);
+        context.lineTo(60, 375);
+        context.lineTo(55, 370);
+
+        context.strokeStyle = "#00C";
+        context.stroke();
+
+      context.font = "bold 12px arial";  //this is very much like CSS font settings
+      context.textBaseline = "top";
+      context.fillText("( 0 , 0 )", 8, 5);
+       
+       console.dir(context);
+        
+        //context.fillText("x", 248, 43); //fillText does the rendering to canvas
+        //context.fillText("y", 58, 165);
+        
+        
+
+        context.textAlign = "right";
+        context.textBaseline = "bottom";
+        context.fillText("( 500 , 375 )", 492, 370);
+        console.dir(context);
+
+
+        ////  context.fillText("string", x , y);
+        //  context.fillText("y", 58, 165);*/
+
+        //  context.font = "bold 12px sans-serif";
+        //  context.fillText("x", 248, 43);
+
+
+
+
+        //  context.fillRect(0, 0, 3, 3);
+        //  context.fillRect(497, 372, 3, 3);
+
+
+    </script>
+
+
+</body>
+</html>

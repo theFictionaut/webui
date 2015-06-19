@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Creating and Calling Functions</title>
+
+    <script type="text/javascript">
+        // SayHello();
+
+        var p = "Graham";
+
+        function sayHello(name, title) {
+
+          return "Hello "+ title + " "  + name;
+        }
+
+//        var x = sayHello(p, "Mr");
+       
+//        console.dir(sayHello);
+
+////        var clone = sayHello;
+
+////        clone();
+
+
+     var sayHello2 = new Function(' alert("Hi there! I am also a function")');
+
+       sayHello2();
+
+        var sayHello3 = function () {
+            alert("I'm a function");
+        }
+        sayHello = "BOOM!";
+
+        var f1 = sayHello;
+
+        f1();
+
+        window.alert("hello");
+        window.sayHello();
+        window.f1();
+        
+       // window.sayHello3();
+
+
+
+        //var sayHello3 = function () {
+        //    alert("I am an annoymous function");
+        //} //shorthand to create a new function object
+
+
+
+//        function SayHelloToSomeone(name, title) {
+//            alert("Hi there " + title + name + "!");
+//        }//<-- return happens here
+
+//        function ReturnAGreetingToSomeone(name) {
+//            return "Hi there " + name + "!"
+//            alert("no one loves me!");
+//        }
+
+//        var SayHello = new Function('alert("Hi there!")');
+
+//        var SayHelloToSomeone = function (name, title) {
+//            alert("Hi there " + title + name + "!");
+//           
+//        }  //<-- return happens here
+
+//        function ReturnAGreetingToSomeone(name) {
+
+//            alert("no one loves me!");
+
+//            ReturnAGreetingToSomeone = copy;
+//            return "Hi there " + name + "!"
+//            
+//        }
+
+    </script>
+
+
+        <script type="text/javascript">
+
+          
+//            var y = sayHello2();
+//            console.log(y);
+//            sayHello3();
+
+            alert("will you reach me?");
+
+
+    </script>
+
+</head>
+<body>
+
+    <script type="text/javascript">
+
+//        var copy = ReturnAGreetingToSomeone;
+
+//        copy("Adam");
+//        ReturnAGreetingToSomeone("Anthony");
+
+        // SayHello();
+      //  SayHelloToSomeone(null,"Dave");
+      //  var s = ReturnAGreetingToSomeone("Laurence");
+
+       
+
+        //console.log(s);
+    
+    </script>
+
+
+
+</body>
+</html>

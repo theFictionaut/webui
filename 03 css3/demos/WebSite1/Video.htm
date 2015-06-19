@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Video Example</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function playMovie(video, time) {
+            //alert("bp");
+            var v = document.getElementById(video);
+            var t = document.getElementById(time);
+            v.play();
+        }
+
+
+        function pauseMovie(video) {
+            var v = document.getElementById(video);
+            v.pause();
+        }
+
+        function movieTime(video, time) {
+
+            time.innerHTML = video.currentTime;
+        }
+
+        function buffering_start() {
+            var b = document.getElementById('timer');
+            b.innerHTML = "Buffering...";
+        }
+
+        function buffering_stop() {
+            var b = document.getElementById('timer');
+            b.innerHTML = "";
+        }
+
+        function seeking_start() {
+            var b = document.getElementById('timer');
+            b.innerHTML = "Seeking...";
+        }
+
+        function seeking_stop() {
+            var b = document.getElementById('timer');
+            b.innerHTML = "";
+        }
+    
+    </script>
+    <article>
+        <figure>
+            <video id="vid" width="480" height="320" controls>
+                <source src="big_buck_bunny_480p_h264.mov" type='video/mp4; codecs="avc1.42E01E, mp41.40.2"' />
+                <source src="big_buck_bunny_480p_stereo.webmvp8.webm" type='video/webm; codecs="vp8, vorbis"' />
+                <source src="big_buck_bunny_480p_stereo.ogg" type='video/ogg; codecs="theora, vorbis"' />
+                
+            </video>
+            <figcaption>
+    
+      <button class="play" type="button" title="play" onclick="playMovie('vid', 'timer'); return false;">
+          &#x25BA;</button>
+    |
+    <button class="pause" title="pause" onclick="pauseMovie('vid');">
+        &#x2590;&#x2590;</button>
+
+                <aside id="timer">
+                </aside>
+    </figcaption>
+        </figure>
+    </article>
+    <audio controls preload="auto">
+        <source src="podcast.mp3" />
+        <source src="podcast.ogg" />
+        <!-- now include flash fall back -->
+    </audio>
+</body>
+</html>

@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        header, article, footer, nav, aside, section {
+            border: 1px solid blue;
+            display: block;
+        }
+
+        nav {
+            width: 25%;
+            margin-right: 15px;
+            float: left;
+            min-height: 350px;
+        }
+
+        article {
+            float: left;
+            width: 73%;
+            min-height: 350px;
+        }
+            article h2 {
+                color: red;
+            }
+
+
+        footer {
+            clear: both;
+        }
+    </style>
+    <script>
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('article');
+
+        if (!navigator.geolocation) {
+            alert('old browser');
+        }
+
+
+    </script>
+
+</head>
+<body>
+    <header>
+        <hgroup>
+            <h1>My page</h1>
+            <h2>My main sub heading</h2>
+        </hgroup>
+        <input type="search" />
+
+    </header>
+    <nav>
+        <header>
+            <h2>Main navigation</h2>
+        </header>
+        <ul>
+            <li>links</li>
+        </ul>
+
+    </nav>
+    <article>
+        <h2>My story</h2>
+        <aside>
+            <h3>Glossary</h3>
+            <dl>
+                <dt>RSS</dt>
+                <dd>RSS stands for RSS feed it is an XML format</dd>
+
+            </dl>
+        </aside>
+    </article>
+
+    <footer>
+
+
+        <small>&copy; qa 2013</small>
+
+    </footer>
+
+</body>
+</html>

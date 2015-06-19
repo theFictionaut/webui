@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script>
+        var classRoom = [
+                        { name: "David", id: 1235, courseCode: "LGJAVSC3" },
+                        { name: "Caroline", id: 1234, courseCode: "LGJAVSC3" }
+                    ]
+        for (var i = 0; i < classRoom.length; i++) {
+            for (var key in classRoom[i]) {
+                console.log(key + " : " + classRoom[i][key]);
+            }
+        }
+
+
+   
+
+
+        console.dir(classRoom);
+
+
+        var drinksOrder = [];
+
+
+
+        var hotDrink = {};
+
+        hotDrink["type"] = "coffee";
+        hotDrink["noOfSugars"] = 2;
+        hotDrink.milk = false;
+
+        var coldDrink = { type: 'coke', size: '500ml', diet: false };
+
+
+        if (hotDrink == coldDrink) {
+            alert('match');
+        }
+
+
+
+        console.dir(hotDrink);
+
+        for (var key in hotDrink) {
+            window.document.writeln(hotDrink[key] + "</br>");
+        }
+
+
+        drinksOrder[0] = hotDrink;
+
+        console.dir(drinksOrder);
+    </script>
+
+</body>
+</html>

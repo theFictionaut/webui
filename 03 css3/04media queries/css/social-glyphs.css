@@ -1,0 +1,16 @@
+﻿.social {
+    font-family: 'Socialglyphs-Regular';
+    font-size: 3em;
+    text-align: center;
+    /*margin: 0 auto 0 auto;*/
+}
+
+    .social a {
+        color: #fff;
+        opacity: 0.5;
+        text-decoration: none;
+    }
+
+        .social a:hover {
+            opacity: 1;
+        }

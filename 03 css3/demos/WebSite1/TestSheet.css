@@ -1,0 +1,50 @@
+﻿a { background-color: White;}
+a:hover{ background-color: Blue;}
+
+body  
+{
+    background-color: Silver; 
+    color: Fuchsia;
+}
+
+
+#parent
+{
+    background-color:Black;
+ width:400px;
+ height:400px;  
+ top: 50px;
+ left: 100px;
+ position: absolute; 
+ z-index: 500;
+}
+
+#a1{ display: block;
+     width:200px;
+     height:200px;
+     background-color: #fff; padding: 1em 0.5em 1em 0.5em;
+     position: absolute;
+     top: 50px;
+     left: -75px;
+     z-index: 50;
+
+
+     
+}
+#a2{ display: block;
+     width:100%;
+     background-color: #fff; padding: 1em 0.5em 1em 0.5em;
+     position: fixed;
+     left: 0px;
+     bottom:0px;
+
+
+     
+}
+
+
+#a1 p{ color: Aqua; font-size: 0.85em; font-family: Verdana, Arial, Sans-Serif}
+
+p.maroonText {color: Maroon;}
+
+#idOfTag {color: Orange; font-family: Arial;}

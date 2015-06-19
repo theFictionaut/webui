@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script src="jquery-1.6.1.js"></script>
+    <script type="text/javascript">
+        var worker = new Worker('ajaxworker.js');
+        worker.addEventListener('message', function (event) {
+            console.dir(event.data);
+
+            $.each(event.data, function () {
+
+
+
+                $('<img>').attr('src', this.src).appendTo('#data');
+
+            });
+        }, false);
+
+        function callWorker(msg) {
+            worker.postMessage(msg); // start the worker.
+        }
+
+    </script>
+
+    <pre>
+
+    HTML5 Example - Worker
+</pre>
+    <div id="mainDiv" style="text-align: center;">
+        <button onclick="callWorker()">
+            Send to Worker.
+        </button>
+    </div>
+    <div id="data">
+    </div>
+
+</body>
+</html>

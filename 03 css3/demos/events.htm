@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Untitled Page</title>
+
+
+    <script type="text/javascript">
+
+
+        var pressed = "";
+
+        function doStuff(e) {
+            var keypressed = 0;
+            if (window.event && window.event.keyCode) {
+                keypressed = window.event.keyCode;
+
+               
+            
+            } 
+            else if (e && e.which)
+            { keypressed = e.which; }
+
+            if (keypressed >= 48 && keypressed <= 57) {
+                alert("incorrect entry");
+            }
+            pressed = keypressed;
+            alert(pressed);
+        }
+    
+    </script>
+</head>
+<body>
+
+<input id="myText" type="text" onkeypress="doStuff(event);" />
+
+
+    <script type="text/javascript">
+
+        var myText = document.getElementById("myText");
+        myText.style.backgroundColor = "red";
+    
+    
+    
+    </script>
+
+
+</body>
+</html>

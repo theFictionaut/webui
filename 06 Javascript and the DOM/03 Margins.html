@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Figure 5.3: negative margin to overlap boxes</title>
+    <link href="stylesheet.css" rel="stylesheet" />
+    <style>
+        body {
+            background: #fff;
+            color: #000;
+            margin: 0px;
+        }
+
+        /*header, article {
+ 	display: block;
+}*/
+
+        header {
+            font: 60px 'GoodDogRegular', Arial, sans-serif;
+
+            display: block;
+            padding-bottom: 2em;
+            text-shadow: 5px 8px 22px #eba4eb;
+            /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+            /*background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2NlZGNlNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ3JSIgc3RvcC1jb2xvcj0iI2NlZGNlNyIgc3RvcC1vcGFjaXR5PSIwLjUiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzU5NmE3MiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);*/
+           
+             background: -moz-linear-gradient(left, 
+            rgba(206,220,231,1) 0%, 
+            rgba(206,220,231,0.5) 47%, 
+            rgba(89,106,114,1) 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(206,220,231,1)), color-stop(47%,rgba(206,220,231,0.5)), color-stop(100%,rgba(89,106,114,1))); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(left, 
+            rgba(206,220,231,1) 0%,
+            rgba(206,220,231,0.5) 47%,
+            rgba(89,106,114,1) 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(left, rgba(206,220,231,1) 0%,rgba(206,220,231,0.5) 47%,rgba(89,106,114,1) 100%); /* Opera 11.10+ */
+            /*background: -ms-linear-gradient(left, rgba(206,220,231,1) 0%,rgba(206,220,231,0.5) 47%,rgba(89,106,114,1) 100%); /* IE10+ */
+            /*background: linear-gradient(to right, rgba(206,220,231,1) 0%,rgba(206,220,231,0.5) 47%,rgba(89,106,114,1) 100%);*/ /* W3C */
+            
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#596a72',GradientType=1 ); /* IE6-8 */
+        }
+
+        article {
+            background-color: rgba(224, 236, 232, 0.97);
+            padding: 15px;
+            border: 1px solid #999;
+            /*background: #fff;*/
+            margin: 1em 2em 3em 4em;
+            -webkit-box-shadow: 5px 5px 10px 5px rgba(50, 70, 20, 0.4);
+            box-shadow: 5px 5px 10px 5px rgba(50, 70, 20, 0.4);
+            -webkit-border-radius: 5px 15px 10px 30px;
+            border-radius: 5px 15px 10px 30px;
+            resize: vertical;
+            overflow: hidden;
+            height: 74px;
+            max-height: 550px;
+        }
+
+        b:hover {
+            outline: 5px dashed red;
+            outline-offset: 10px;
+        }
+
+
+
+        textarea {
+            resize: vertical;
+            max-height: 200px;
+            border-radius: 8px;
+            background: rgb(254,191,1); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmViZjAxIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZlYmYwMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+background: -moz-linear-gradient(-45deg,  rgba(254,191,1,1) 0%, rgba(254,191,1,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(254,191,1,1)), color-stop(100%,rgba(254,191,1,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(-45deg,  rgba(254,191,1,1) 0%,rgba(254,191,1,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(-45deg,  rgba(254,191,1,1) 0%,rgba(254,191,1,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(-45deg,  rgba(254,191,1,1) 0%,rgba(254,191,1,1) 100%); /* IE10+ */
+background: linear-gradient(135deg,  rgba(254,191,1,1) 0%,rgba(254,191,1,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#febf01', endColorstr='#febf01',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+
+
+        }
+
+        article > div {
+            -moz-column-count: 3;
+            -moz-column-gap: 3px;
+            -webkit-column-count: 3;
+            -webkit-column-gap: 3px;
+            column-count: 3;
+            column-gap: 3px;
+            -moz-column-rule: 1px dashed #ff00ff; /* Firefox */
+            -webkit-column-rule: 1px dashed #ff00ff; /* Safari and Chrome */
+            column-rule: 1px dashed #ff00ff;
+        }
+
+        header + article {
+            margin-top: -1em;
+        }
+
+        p:not(:nth-child(even)) {
+            background-color: rgba(255, 106, 0, 0.3);
+        }
+    </style>
+    <script>
+        document.createElement('header');
+
+    </script>
+</head>
+<body>
+    <div>
+        <header>
+            <h1>Header Content</h1>
+            <p>More Header Content</p>
+            <textarea></textarea>
+        </header>
+        <article>
+            <h2>My important section</h2>
+            <div>
+                <p id="p1">
+                    Some article content which
+                <br />
+                    will break into the header above
+                </p>
+                <p>Some <b>article</b> content which will break into the header above</p>
+                <blockquote>
+                    <p>Some article content which will break into the header above</p>
+                </blockquote>
+                <p>Some <b>content</b> of another article which will follow as normal</p>
+                <p>Some article content which will break into the header above</p>
+                <p>Some article content which will break into the header above</p>
+                <p>Some content of another article which will follow as normal</p>
+                <p>Some article content which will break into the header above</p>
+                <p>Some article content which will break into the header above</p>
+                <p>Some content of another article which will follow as normal</p>
+                <p>Some article content which will break into the header above</p>
+                <p>Some article content which will break into the header above</p>
+                <p>Some content of another article which will follow as normal</p>
+                <p>Some article content which will break into the header above</p>
+                <p>Some article content which will break into the header above</p>
+            </div>
+        </article>
+        <article>
+            <h2>My important section</h2>
+            <hr />
+            <p>Some content of another article which will follow as normal</p>
+            <p>Some article content which will break into the header above</p>
+            <p>Some article content which will break into the header above</p>
+        </article>
+
+    </div>
+    <script src="../07%20Introducing%20jQuery/refactor/js/vendor/jquery-1.9.0.js"></script>
+    <script>
+        $('article>h2:first-of-type').text('gotcha');
+        //console.dir(firstH2);
+        //firstH2.innerHTML = "HELLO WORLD!";
+
+
+        //$('body h1').css('background-color', 'red').slideUp(5000).slideDown(1000);
+
+
+        //var allP = document.querySelectorAll('h1');
+
+        //for (var i = 0; i < allP.length; i++) {
+        //    allP[i].style.backgroundColor = 'lime';
+        //}
+
+        //console.dir(allP);
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chapter 14: Example: Transition Example</title>
+<style>
+body {
+    background: #fff;
+    color: #000;
+}
+
+img { /* for demonstration only */
+	margin: 50px;
+}
+
+img {
+	/* for Firefox 4 */
+	-moz-transition: -moz-transform 0.5s ease-out;
+	/* for Safari and Chrome */
+	-webkit-transition: -webkit-transform 0.5s ease-out;
+	/* For Opera */
+	-o-transition: -o-transform 0.5s ease-out;
+	/* W3C specification */
+	transition: transform 0.5s ease-out;
+}
+img:hover {
+	/* for Firefox 4 */
+	-moz-transform: scale(1.5, 1.5);
+	/* for Safari and Chrome */
+	-webkit-transform: scale(1.5, 1.5);
+	/* For Opera */
+	-o-transform: scale(1.5, 1.5);
+	/* W3C specification */
+	transform: scale(1.5, 1.5);
+}
+
+
+</style>
+</head>
+<body>
+<img src="images/hover_me.png" width="90" height="90" alt="Hover Me" />
+
+</body>
+</html>

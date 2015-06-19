@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Figure 5.3: negative margin to overlap boxes</title>
+    <link href="stylesheet.css" rel="stylesheet" />
+    <style>
+        body {
+            background: #fff;
+            color: #000;
+            margin: 0px;
+        }
+
+        /*header, article {
+ 	display: block;
+}*/
+
+        header {
+
+                background-color: red;
+            display: block;
+             padding-bottom: 2em; 
+          
+        }
+        
+            header h1{
+                margin-top: 0;
+            }
+
+        article {
+            background-color: rgba(224, 236, 232, 0.97);
+           
+            
+            
+            
+            -moz-column-count: 3;
+-moz-column-gap: 10px;
+-webkit-column-count: 3;
+-webkit-column-gap: 10px;
+column-count: 3;
+column-gap: 10px;
+            
+            padding: 0.5em;
+            
+            
+            border: 1px solid #999;
+           
+            margin: 1em 2em 3em 4em;
+         
+        }
+
+       
+    article h2{ margin-top: 0;}        
+        
+       
+       
+        header + article {
+            margin-top: -1em; 
+        }
+
+       
+    </style>
+    <script>
+        document.createElement('header');
+
+    </script>
+</head>
+<body>
+    <div>
+        <header>
+            <h1>Header Content</h1>
+            <p>More Header Content</p>
+           
+        </header>
+        <article>
+            <h2>My important section</h2>
+            <div>
+                <p id="p1">
+                    Some article content which
+                <br />
+                    will break into the header above
+                </p>
+                <p>Some <b>article</b> content which will break into the header above</p>
+                <blockquote>
+                    <p>Some article content which will break into the header above</p>
+                </blockquote>
+                <p>Some <b>content</b> of another article which will follow as normal</p>
+                <p>Some article content which will break into the header above</p>
+                <p>Some article content which will break into the header above</p>
+                <p>Some content of another article which will follow as normal</p>
+                <p>Some article content which will break into the header above</p>
+                <p>Some article content which will break into the header above</p>
+                <p>Some content of another article which will follow as normal</p>
+                <p>Some article content which will break into the header above</p>
+                <p>Some article content which will break into the header above</p>
+                <p>Some content of another article which will follow as normal</p>
+                <p>Some article content which will break into the header above</p>
+                <p>Some article content which will break into the header above</p>
+            </div>
+        </article>
+        <article>
+            <h2>My important section</h2>
+            <hr />
+            <p>Some content of another article which will follow as normal</p>
+            <p>Some article content which will break into the header above</p>
+            <p>Some article content which will break into the header above</p>
+        </article>
+
+    </div>
+
+</body>
+</html>

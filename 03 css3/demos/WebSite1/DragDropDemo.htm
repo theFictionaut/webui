@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Basic Drag and Drop</title>
+    <style>
+        #drop
+        {
+            min-height: 100px;
+            width: 200px;
+            border: 3px dashed #ccc;
+            margin: 10px;
+            padding: 10px;
+        }
+        p
+        {
+            margin: 3px 0;
+        }
+    </style>
+    <script type="text/javascript" src="events.js"></script>
+</head>
+<body>
+    <img src="santa.png" alt="Santa" draggable />
+    <img src="tree.png" alt="Tree"  />
+    <img src="stocking.png" alt="Stocking"  />
+    
+    <div id="drop" draggable>
+
+    </div>
+
+
+
+    <script type="text/javascript">
+
+        var drop = document.querySelector('#drop');
+
+        // Tells the browser that we *can* drop on this target
+        addEvent(drop, 'dragover', cancel);
+        addEvent(drop, 'dragenter', cancel);
+
+        addEvent(drop, 'drop', function (event) {
+            // stops the browser from redirecting off to the text.
+            
+            if (event.preventDefault) {
+            event.preventDefault();
+            }
+   
+            var i = new Image();
+            i.src = event.dataTransfer.getData('Text');
+            this.appendChild(i);
+           
+
+            //this.innerHTML += '<p>' + event.dataTransfer.getData('Text') + '</p>';
+
+            return false;
+        });
+
+        function cancel(event) {
+            if (event.preventDefault) {
+                event.preventDefault();
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>css3 pseudo selector</title>
+    <style type="text/css" media="all">
+        body article {
+            max-width: 980px;
+            min-width: 660px;
+            -moz-border-radius: 10px;
+            float: left;
+            border-radius: 10px;
+            background-color: #679fa8;
+        }
+
+        ol {
+            float: left;
+            -moz-border-radius: 15px;
+            border-radius: 15px;
+            background-color: rgba(250,250,210, 0.3);
+            -webkit-transform: scale(2.4) rotate(24deg) skewX(34deg);
+            -webkit-transform-origin: 0% 0%;
+            -moz-transform: scale(2.4) rotate(24deg) skewX(34deg);
+            -moz-transform-origin: 0% 0%;
+            -o-transform: scale(2.4) rotate(24deg) skewX(34deg);
+            -o-transform-origin: 0% 0%;
+            -ms-transform: scale(2.4) rotate(24deg) skewX(34deg);
+            -ms-transform-origin: 0% 0%;
+            transform: scale(2.4) rotate(24deg) skewX(34deg);
+            transform-origin: 0% 0%;
+        }
+
+
+        li:first-child {
+            font-size: 0.875em;
+            color: Purple;
+        }
+
+        li:nth-of-type(3) {
+            font-size: 1.5em;
+            color: Maroon;
+        }
+
+        li:nth-last-of-type(2) {
+            font-size: 2em;
+            color: Fuchsia;
+        }
+
+        li:last-of-type {
+            color: Red;
+        }
+
+        li:last-child {
+            font-size: 2.5em;
+            color: Navy;
+        }
+
+        article > h1 {
+            text-shadow: 10px 8px 20px #383499;
+            font-family: Tahoma;
+        }
+    </style>
+</head>
+<body>
+    <article id="main">
+        <h1>The First Five Doctors</h1>
+        <ol>
+            <li>William Hartnel</li>
+            <li>Patrick Troughton</li>
+            <li>John Pertwee</li>
+            <li>Tom Baker</li>
+            <li>Peter Davidson</li>
+        </ol>
+    </article>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Figure 14.10: multiple transformation example</title>
+<style>
+
+body {
+    background: #fff;
+    color: #000;
+}
+
+article {
+	position: relative;
+	display: block;
+	width: 200px;
+	height: 150px;
+	margin-left: 100px;
+	border: 1px solid black;
+}
+article time {
+	position: absolute;
+	top: 10px;
+	left: -50px;
+	height: 30px;
+	width: 50px;
+	padding: 10px 10px 10px 50px;
+	text-align: right;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 30px;
+	color: #fff;
+	background: url(images/flag.png) no-repeat right top;
+}
+
+/* modifications to 7.6 using two transforms */
+article time {
+	/* for Firefox */
+	-moz-transform: rotate(270deg) translate(-19px,-31px);
+	/* for Safari and Chrome */
+	-webkit-transform: rotate(270deg) translate(-19px,-31px);
+	/* for Opera */
+	-o-transform: rotate(270deg) translate(-19px,-31px);
+	/* W3C specs */
+	transform: rotate(270deg) translate(-19px,-31px);
+}
+
+</style>
+</head>
+<body>
+
+<article>
+	<time>13th</time>
+</article>
+
+</body>
+</html>

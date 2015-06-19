@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Figure 14.7: Border Images</title>
+<style>
+body {
+    background: #fff;
+    color: #000;
+}
+
+
+div { /* for demostration purposes only */
+	float: left;
+	width: 130px;
+	height: 180px;
+	margin-right: 40px;
+	padding: 10px;
+	border: 1px solid #000;
+}
+
+
+div {
+	/* for unsupported browsers */
+	border-style: solid;
+	border-color: #fff;
+	
+	/* set common width for all browsers */
+	border-width: 30px;
+}
+
+div.one {
+	/* for Firefox */
+	-moz-border-image: url(images/border_background_tile.png) 30 30 30 30 round round;
+	/* for Safari and Chrome */
+	-webkit-border-image: url(images/border_background_tile.png) 30 30 30 30 round round;
+	/* W3C specs */
+	border-image: url(images/border_background_tile.png) 30 30 30 30 round round;
+}
+div.two {
+	/* for Firefox */
+	-moz-border-image: url(images/border_background_tile.png) 30 30 30 30 stretch stretch;
+	/* for Safari and Chrome */
+	-webkit-border-image: url(images/border_background_tile.png) 30 30 30 30 stretch stretch;
+	/* W3C specs */
+	border-image: url(images/border_background_tile.png) 30 30 30 30 stretch stretch;
+}
+
+
+</style>
+</head>
+<body>
+<div class="one">
+	border image with sides and middle set to round
+</div>
+<div class="two">
+	border image with sides and middle set to stretch
+</div>
+</body>
+</html>

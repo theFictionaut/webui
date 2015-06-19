@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter 14: Example: Transition Example</title>
+    <style>
+        body {
+            background: #fff;
+            color: #000;
+        }
+        img {
+
+                transition: all ease-in-out  2s;
+        }
+      
+
+            img:hover {
+
+
+          transform: scale(0.8) scaleZ(3.0) rotateX(9deg) rotateY(9deg);
+transform-origin: 0% 0%;
+perspective: 860;-webkit-transform: scale(0.8) scaleZ(3.0) rotateX(9deg) rotateY(9deg);
+-webkit-transform-origin: 0% 0%;
+-webkit-perspective: 860;
+-webkit-perspective-origin: 91% 50%;
+-moz-transform: scale(0.8) scaleZ(3.0) rotateX(9deg) rotateY(9deg);
+-moz-transform-origin: 0% 0%;
+-moz-perspective: 860;
+-moz-perspective-origin: 91% 50%;
+-o-transform: scale(0.8) scaleZ(3.0) rotateX(9deg) rotateY(9deg);
+-o-transform-origin: 0% 0%;
+-o-perspective: 860;
+-o-perspective-origin: 91% 50%;
+-ms-transform: scale(0.8) scaleZ(3.0) rotateX(9deg) rotateY(9deg);
+-ms-transform-origin: 0% 0%;
+-ms-perspective: 860;
+-ms-perspective-origin: 91% 50%;
+transform: scale(0.8) scaleZ(3.0) rotateX(9deg) rotateY(9deg);
+transform-origin: 0% 0%;
+perspective: 860;
+perspective-origin: 91% 50%;
+            }
+    </style>
+</head>
+<body>
+    <img src="images/hover_me.png" width="90" height="90" alt="Hover Me" />
+    <div style="width: 300px; background-color: red; height: 300px;">content</div>
+</body>
+</html>

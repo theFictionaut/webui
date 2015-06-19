@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Hello World</title>
+    <link href="XMLHttpStyles.css" rel="stylesheet" type="text/css" />
+    <script src="jquery-2.0.2.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+
+        $(document).ready(
+            function () {
+
+                $('#ajaxCall').bind('click', doCall);
+
+            }
+
+        );
+
+
+
+        function doCall() {
+
+            $.ajax({
+                type: 'GET',
+                url: 'AddressBook.ashx',
+                success: function (data) {
+                    r = eval(data);
+
+                    $.each(r.AddressBook, function () {
+
+                        $('<p>' + this.City + '</p>').appendTo('#results');
+                        $('<option>' + this.City + '</option>').appendTo('#ddl');
+                    
+                    });
+
+
+                }
+            });
+        }
+
+
+
+
+
+
+        
+    </script>
+</head>
+<body>
+    <h1>
+        EX09 - jQuery Ajax Call</h1>
+    <br />
+    <button id="ajaxCall" type="button">
+        Get Addreses</button>
+    <div id="results">
+        <select id="ddl">
+            
+        </select>
+    </div>
+    <br />
+</body>
+</html>

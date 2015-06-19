@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'conspiracyregular';
+    src: url('conspira-webfont.eot');
+    src: url('conspira-webfont.eot?#iefix') format('embedded-opentype'),
+         url('conspira-webfont.woff') format('woff'),
+         url('conspira-webfont.ttf') format('truetype'),
+         url('conspira-webfont.svg#conspiracyregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
